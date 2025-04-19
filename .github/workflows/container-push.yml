@@ -26,7 +26,6 @@ jobs:
           push: true               
           tags: dyoung1023/young-ceg3120:latest
 
-      Output the image name (make sure its working)
       - name: Display Image Name
         run: echo "Pushed Docker image: dyoung1023/young-ceg3120:latest"
 
