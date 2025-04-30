@@ -1,4 +1,5 @@
-# Part One # 
+# Project 5 #
+## Part One ##
 
 ### Generating `tag`s ###
 - The command `git tag` will show tags in a `git` repository
@@ -28,7 +29,16 @@
   - ./.github/workflows/container-push.yml
 
 ### Testing & Validating ###
-- 
+- To test create and push a tag
+  - `git tag -a v1.1.4 -m "Testing workflow"` to create tag
+  - `git push origin v1.1.4` to push tag
+- Should show in terminal, `* [new tag]         v1.1.4 -> v1.1.4` to show it was pushed
+- Go to github and go to `Actions` and you should see it running
+  - If there is a green checkmark that means it worked
+- Go to dockerhub and under the correct repository, look under tags and it should be there
+- Use the command associated with the tage to make sure it worked
+  - `docker pull dyoung1023/young-ceg3120:1.1.4`
+  - `docker run -rm dyoung1023/young-ceg3120:1.1.4` to make sure the image runs
 
 
 
