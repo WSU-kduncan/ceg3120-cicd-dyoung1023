@@ -41,6 +41,11 @@
   - `docker run -d -p 4200:4200 dyoung1023/young-ceg3120:1.1.6` to make sure the image runs
   - Go to http://localhost:4200 and you should see the app running (localhost is my ubuntu address)
 
+ ## Part Two ## 
+
+ ### EC2 Instance Details ###
+ - 
+
 
 
 
