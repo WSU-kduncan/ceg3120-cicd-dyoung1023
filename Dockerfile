@@ -4,12 +4,12 @@ FROM node:18-bullseye
 # Working directory 
 WORKDIR /app
 
-# Copy angular files
+# Copy angular file
 COPY angular-site/wsu-hw-ng-main/ ./
 
 RUN apt update && \
-    npm install -g @angular/cli \
-    npm install --save-dev @angular-devkit/build-angular \ 
+    npm install -g @angular/cli && \
+    npm install --save-dev @angular-devkit/build-angular && \ 
     npm install
 
 EXPOSE 4200
