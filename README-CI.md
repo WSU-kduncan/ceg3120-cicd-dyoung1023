@@ -74,9 +74,12 @@
         - Press `Add secret`
 
 ### CI with GitHub Actions
-- My workflow 
+- My workflow builds and pushes a container images to dyoung1023/ceg-3120 when a commit is pushed to the main branch
 ### Testing & Validating
-
+- Go to github repository
+- Go to Actions
+- You can see the action working and when it turns green that means it worked
+- You can also check dockerhub afterwards and should see the new image
 
 ## Resources
 * https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04
