@@ -8,7 +8,7 @@ WORKDIR /app
 COPY angular-site/wsu-hw-ng-main/ ./
 
 RUN apt update && \
-    npm install -g @angular/cli
+    npm install -g @angular/cli \
     npm install
 
 EXPOSE 4200
