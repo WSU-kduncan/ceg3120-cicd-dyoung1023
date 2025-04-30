@@ -30,15 +30,16 @@
 
 ### Testing & Validating ###
 - To test create and push a tag
-  - `git tag -a v1.1.4 -m "Testing workflow"` to create tag
-  - `git push origin v1.1.4` to push tag
-- Should show in terminal, `* [new tag]         v1.1.4 -> v1.1.4` to show it was pushed
+  - `git tag -a v1.1.6 -m "Testing workflow"` to create tag
+  - `git push origin v1.1.6` to push tag
+- Should show in terminal, `* [new tag]         v1.1.4 -> v1.1.6` to show it was pushed
 - Go to github and go to `Actions` and you should see it running
   - If there is a green checkmark that means it worked
 - Go to dockerhub and under the correct repository, look under tags and it should be there
 - Use the command associated with the tage to make sure it worked
-  - `docker pull dyoung1023/young-ceg3120:1.1.4`
-  - `docker run -rm dyoung1023/young-ceg3120:1.1.4` to make sure the image runs
+  - `docker pull dyoung1023/young-ceg3120:1.1.6`
+  - `docker run -d -p 4200:4200 dyoung1023/young-ceg3120:1.1.6` to make sure the image runs
+  - Go to http://localhost:4200 and you should see the app running (localhost is my ubuntu address)
 
 
 
