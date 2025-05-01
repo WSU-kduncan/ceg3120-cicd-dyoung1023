@@ -1,19 +1,9 @@
 [
   {
     "id": "refresh-container",
-    "execute-command": "/home/ubuntu/refresh-angular-container.sh",
+    "execute-command": "/home/ubuntu/ceg3120-cicd-dyoung1023/deployment/app-refresh.sh",
     "command-working-directory": "/home/ubuntu",
-    "response-message": "Container refresh initiated.",
-    "trigger-rule": {
-      "match": {
-        "type": "value",
-        "parameter": {
-          "source": "header",
-          "name": "X-Hub-Signature"
-        },
-        "value": "your-secret-token"
-      }
-    }
+    "response-message": "Container refresh initiated."
   }
 ]
 
