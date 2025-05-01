@@ -1,4 +1,9 @@
 # Project 5 #
+
+### Continuous Deployment Project Overview ###
+- The goal of this project is to implement semantic versioning using `git tag`
+- Using `webhook`s to keep production up to date
+
 ## Part One ##
 
 ### Generating `tag`s ###
@@ -115,13 +120,18 @@
 
 ### Configure a `webhook` Service on EC2 Instance ###
 - The webhook service contents allow for webhook to run immeadiately when my EC2 instance starts
+- Use `sudo systemctl enable webhook` to enable the webhook
 - Use `sudo systemctl start webhook` to start the webhook listener
 - Use `sudo systemctl status webhook` to verify it is on
-- To verify it is capturing payloads and triggering bash scripts use `tail -f /var/log/webhook.log`
+- To verify it is capturing payloads and triggering bash scripts use `tail -f /var/log/webhook.log` to see live
+  - `cat /var/log/webhook.log` to see logs
 - Link to service file
   - ./deployment/webhook.service
 
-
+### Resources ###
+- https://github.com/adnanh/webhook
+- https://blog.devgenius.io/build-your-first-ci-cd-pipeline-using-docker-github-actions-and-webhooks-while-creating-your-own-da783110e151
+- https://linuxhandbook.com/create-systemd-services/
 
 
   
