@@ -1,0 +1,19 @@
+[
+  {
+    "id": "refresh-container",
+    "execute-command": "/home/ubuntu/refresh-angular-container.sh",
+    "command-working-directory": "/home/ubuntu",
+    "response-message": "Container refresh initiated.",
+    "trigger-rule": {
+      "match": {
+        "type": "value",
+        "parameter": {
+          "source": "header",
+          "name": "X-Hub-Signature"
+        },
+        "value": "your-secret-token"
+      }
+    }
+  }
+]
+
