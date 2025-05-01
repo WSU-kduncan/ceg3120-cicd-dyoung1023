@@ -3,7 +3,17 @@
     "id": "refresh-container",
     "execute-command": "/home/ubuntu/ceg3120-cicd-dyoung1023/deployment/app-refresh.sh",
     "command-working-directory": "/home/ubuntu",
-    "response-message": "Container refresh initiated."
+    "response-message": "Container refresh initiated.",
+    "pass-arguments-to-command": [
+	    {
+    "source": "payload",
+    "name": "repository.repo_name"
+  },
+  {
+    "source": "payload",
+    "name": "push_data.tag"
+  }
+    ]
   }
 ]
 

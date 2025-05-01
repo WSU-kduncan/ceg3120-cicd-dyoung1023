@@ -3,6 +3,11 @@
 IMAGE_NAME="dyoung1023/young-ceg3120:latest"
 CONTAINER_NAME="angular-app"
 
+REPO_NAME=$1
+TAG=$2
+
+echo "[$(date)] Received push for repo: $REPO_NAME with tag: $TAG" >> /var/log/webhook-payload.log
+
 docker pull $IMAGE_NAME
 
 docker stop $CONTAINER_NAME 2>/dev/null
