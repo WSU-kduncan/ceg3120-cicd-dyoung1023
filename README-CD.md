@@ -91,7 +91,10 @@
   - ./deployment/app-refresh.sh
 
 ### Configuring a `webhook` Listener on EC2 Instance ###
-- 
+- Use `sudo apt-get install webhook` to install webhook on ubuntu
+- Use `webhook --version` to make sure it was installed
+  - Something like `webhook version 2.8.0` should show up
+- The `webhook` definition file defines a webhook hook
 
 
 
