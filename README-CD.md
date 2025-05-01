@@ -72,8 +72,17 @@
 - On your terminal it should show that it has compiled sucessfully
 - Go to http://localhost:4200 and you should see the app running (localhost is my ubuntu IP address)
 - From inside the instance, using the command `curl http://127.0.0.1:4200` it should show you the contents of the app
+- To manually refresh the container
+  - Stop the running container and then remove
+    - `docker ps` to find the container
+    - `docker stop <name>` to stop
+    - `docker rm <name>` to remove
+  - `docker pull <name>:latest` to get the newest version
+  - `docker run -it -p 4200:4200 <name>:latest` to run the latest container 
 
 ### Scripting Container Application Refresh ###
+
+
 
 
 
