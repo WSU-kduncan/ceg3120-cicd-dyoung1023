@@ -81,8 +81,17 @@
   - `docker run -it -p 4200:4200 <name>:latest` to run the latest container 
 
 ### Scripting Container Application Refresh ###
+- Using `sudo ./app-refresh.sh` to run my script and make sure it works
+- use the `docker ps` command to make sure the new container started
+- http://localhost:4200 and you should see the app running (localhost is my ubuntu IP address)
+- From inside the instance, using the command `curl http://127.0.0.1:4200` it should show you the contents of the app
+- Run `sudo ./app-refresh.sh` again
+  - Use `docker ps` and you should only see one container still. This means your script is deleting the old containers as well
+- Link to bash script
+  - 
 
-
+### Configuring a `webhook` Listener on EC2 Instance ###
+- 
 
 
 
