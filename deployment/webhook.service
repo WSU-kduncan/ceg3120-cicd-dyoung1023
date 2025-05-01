@@ -1,0 +1,15 @@
+[Unit]
+Description=Webhook Listener Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/webhook -hooks /home/ubuntu/ceg3120-cicd-dyoung1023/deployment/hooks.json -port 9000 -verbose
+WorkingDirectory=/home/ubuntu
+StandardOutput=append:/var/log/webhook.log
+StandardError=append:/var/log/webhook-error.log
+Restart=always
+User=ubuntu
+
+[Install]
+WantedBy=multi-user.target
+
