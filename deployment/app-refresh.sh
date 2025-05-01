@@ -1,7 +1,7 @@
 #!/bin/bash
 
 IMAGE_NAME="dyoung1023/young-ceg3120:latest"
-CONTAINER_NAME="angular-bird-app"
+CONTAINER_NAME="angular-app"
 
 REPO_NAME=$1
 TAG=$2
