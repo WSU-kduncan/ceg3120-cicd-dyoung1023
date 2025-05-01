@@ -99,7 +99,7 @@
 - Use `sudo apt-get install webhook` to install webhook on ubuntu
 - Use `webhook --version` to make sure it was installed
   - Something like `webhook version 2.8.0` should show up
-- The `webhook` definition file defines a webhook hook
+- The `webhook` definition file is an HTTP request triggered by an event
 - Use `webook -hooks hook.json -port 9000 -verbose`
   - You see an output like `found 1 hook(s) in file` which shows the definition file was loaded
   - Send a test like `curl -X POST http://34.229.84.76:9000/hooks/refresh-container \
@@ -113,7 +113,7 @@
     - ./deployment/hook.json
    
 ### Configuring a Payload Sender ###
-- I chose DockerHub, because
+- I chose DockerHub, because of its native webhook support
 - The payload is triggered when there is a push
 - You can verify a successful payload delivery by going to dockerhub and going to webhooks and under view history it will say successful
   - Also, reaading the logs on the terminal will state the success
@@ -132,6 +132,7 @@
 - https://github.com/adnanh/webhook
 - https://blog.devgenius.io/build-your-first-ci-cd-pipeline-using-docker-github-actions-and-webhooks-while-creating-your-own-da783110e151
 - https://linuxhandbook.com/create-systemd-services/
+- https://hookdeck.com/webhooks/guides/what-are-webhooks-how-they-work#:~:text=A%20webhook%20is%20an%20HTTP,fired%20in%20the%20source%20system.
 
 
   
