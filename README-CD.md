@@ -88,7 +88,7 @@
 - Run `sudo ./app-refresh.sh` again
   - Use `docker ps` and you should only see one container still. This means your script is deleting the old containers as well
 - Link to bash script
-  - 
+  - ./deployment/app-refresh.sh
 
 ### Configuring a `webhook` Listener on EC2 Instance ###
 - 
