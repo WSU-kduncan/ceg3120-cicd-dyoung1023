@@ -95,6 +95,31 @@
 - Use `webhook --version` to make sure it was installed
   - Something like `webhook version 2.8.0` should show up
 - The `webhook` definition file defines a webhook hook
+- Use `webook -hooks hook.json -port 9000 -verbose`
+  - You see an output like `found 1 hook(s) in file` which shows the definition file was loaded
+  - Send a test like `curl -X POST http://34.229.84.76:9000/hooks/refresh-container \
+     -H 'Content-Type: application/json' \
+     -H 'X-Webhook-Token: my-secret-token' \
+     -d '{"event":"test"}'`
+    - With the `-verbose` flag it will show how it is running
+    - If it is working you should see something like `refresh-container hook triggered successfully`
+    - Use `docker ps` to make sure that the container is running
+  - Link to definition file
+    - ./deployment/hook.json
+   
+### Configuring a Payload Sender ###
+- I chose DockerHub, because
+- The payload is triggered when there is a push
+- You can verify a successful payload delivery by going to dockerhub and going to webhooks and under view history it will say successful
+  - Also, reaading the logs on the terminal will state the success
+
+### Configure a `webhook` Service on EC2 Instance ###
+- The webhook service contents allow for webhook to run immeadiately when my EC2 instance starts
+- Use `sudo systemctl start webhook` to start the webhook listener
+- Use `sudo systemctl status webhook` to verify it is on
+- To verify it is capturing payloads and triggering bash scripts use `tail -f /var/log/webhook.log`
+- Link to service file
+  - ./deployment/webhook.service
 
 
 
